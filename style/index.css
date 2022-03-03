@@ -1,6 +1,9 @@
 :root {
     --cor-principal: #B2967D;
+    --cor-principal-dark: #9c8571;
+    --cor-principal-darker: #816e5d;
     --cor-secundaria:  #E6BEAE;
+    --cor-secundaria-dark:#cc8e75;
     --bg-color: #E7D8C9;
     --bird-picker-color-dark: #5c3f24;
     --bird-picker-color-light: #826244;
@@ -28,6 +31,8 @@ header{
     flex-direction: row;
     justify-content: space-between;
     align-items:center;
+    box-shadow: 0px -2px 15px rgb(0 0 0);
+    
 }
 
 h1{
@@ -36,23 +41,29 @@ h1{
     display: flex;
     align-items: center;
     margin: 0px 10px;
-    transition: 1s;
-}
-
-h1:hover{
-    font-size: 50px;
-    
 }
 
 nav{
     background-color: var(--cor-principal);
     height: 100%;
     width: 50%;
+    font-size: 20px;
+}
+
+header ul{
     display: flex;
     flex-direction: row;
+    align-content: center;
     justify-content: space-around;
-    align-items: center;
-    font-size: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
 }
 
 a{
@@ -64,49 +75,51 @@ a:hover{
     /* background-color: #b4b43d; */
 }
 
-/* Dropdown Button */
-/* .dropbtn {
-    background-color: #04AA6D;
-    color: white;
-    border: none;
-  } */
-  
-  /* The container <div> - needed to position the dropdown content */
-  .dropdown {
-    position: relative;
-    display: inline-block;
+nav ul, nav ul li{
+    list-style: none;
 }
 
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-    display: none;
+.menu{
+    position: relative;
+    padding: 10px;
+}
+
+.ani-menu{
+    display: flex;
+    flex-direction: column;
     position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    top: 110%;
+    left: 0;
+    width: fit-content;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-3em);
+    z-index: -1;
+    /* transition: all 1s, visibility 0s linear 0.3s, z-index 0s linear 0.00s; */
+    transition: all 0.8s ease 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+}
+
+.ani-menu a{
+    color: var(--cor-secundaria);
+    background-color: var(--cor-principal-dark);
+    padding: 0px 10px 5px 10px;
+}
+
+.menu:focus, .menu:focus-within .ani-menu, .menu:hover .ani-menu{
+    visibility: visible;
+    opacity: 1;
     z-index: 1;
+    transform: translateY(0);
+    transition-delay: 0s, 0s, 0.03s;
 }
-  
-/* Links inside the dropdown */
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
+
+.menu:hover{
+    background-color: var(--cor-principal-dark);
 }
-  
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
-  
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-    display: block;
+.ani-menu a:hover{
+    background-color: var(--cor-principal-darker);
 }
-  
-/* Change the background color of the dropdown button when the dropdown content is shown */
-/* .dropdown:hover .dropdown {
-    background-color: #3e8e41;
-} */
+
 
 @media (max-width:701px){
     header{
