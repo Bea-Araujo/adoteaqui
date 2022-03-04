@@ -30,7 +30,7 @@
         </nav>
     </header>
     <main>
-        <div class="preparativos">
+        <article class="preparativos">
             <h3>Preparativos</h3>
             <div class="container">
                 <ul>
@@ -55,17 +55,17 @@
                         quibusdam fugiat?</p>
                 </ul>
             </div>
-            <h3><label>Quero adotar!</label></h3>
-        </div>
+            <h3><a href="#quero-adotar">Quero adotar!</a></h3>
+        </article>
 
         <h3>Sobre qual pet você gostaria de saber?</h3>
 
         <div class="bird-picker">
-            <p><a href="#calopsita">Calopsita</a></p>
-            <p><a href="#agapornis">Agapornis</a></p>
-            <p><a href="#cacatua">Cacatua</a></p>
-            <p><a href="#tucano">Tucano</a></p>
-            <p><a href="#arara">Arara</a></p>
+            <a href="#calopsita">Calopsita</a>
+            <a href="#agapornis">Agapornis</a>
+            <a href="#cacatua">Cacatua</a>
+            <a href="#tucano">Tucano</a>
+            <a href="#arara">Arara</a>
         </div>
 
 
@@ -81,7 +81,7 @@
                     <br>
                     Se interessou? Entre em contato para que possamos te apresentar a sua mais nova calopsita!
                 </p>
-                <h3><label>Quero adotar!</label></h3>
+                <h3><a href="#quero-adotar">Quero adotar!</a></h3>
             </div>
 
             <img src="https://www.dicaspetz.com.br/wp-content/uploads/2020/07/calopsitas-felizes.jpg" alt="calopsita" />
@@ -99,7 +99,7 @@
                     <br>
                     Se interessou? Entre em contato para que possamos te apresentar o seu mais novo agapornis!
                 </p>
-                <h3><label>Quero adotar!</label></h3>
+                <h3><a href="#quero-adotar">Quero adotar!</a></h3>
             </div>
 
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Agapornis_genus_-lovebirds_in_aviary-8.jpg/1200px-Agapornis_genus_-lovebirds_in_aviary-8.jpg"
@@ -116,7 +116,7 @@
                     <br>
                     Se interessou? Entre em contato para que possamos te apresentar a sua mais nova cacatua!
                 </p>
-                <h3><label>Quero adotar!</label></h3>
+                <h3><a href="#quero-adotar">Quero adotar!</a></h3>
             </div>
 
             <img src="https://zoolove.com.br/wp-content/uploads/2020/04/cacatua-1.jpg" alt="cacatua" />
@@ -132,7 +132,7 @@
                     <br>
                     Se interessou? Entre em contato para que possamos te apresentar o seu mais novo tucano!
                 </p>
-                <h3><label>Quero adotar!</label></h3>
+                <h3><a href="#quero-adotar">Quero adotar!</a></h3>
             </div>
 
             <img src="https://s2.glbimg.com/XBFzEH5K4rvlRREVJNu7I51zt0I=/0x0:2048x1365/984x0/smart/filters:strip_icc()/s.glbimg.com/jo/g1/f/original/2017/01/27/tucano.jpg"
@@ -149,13 +149,26 @@
                     <br>
                     Se interessou? Entre em contato para que possamos te apresentar a sua mais nova arara!
                 </p>
-                <h3><label>Quero adotar!</label></h3>
+                <h3><a href="#quero-adotar">Quero adotar!</a></h3>
             </div>
 
             <img src="https://s1.static.brasilescola.uol.com.br/be/2021/10/araras.jpg" alt="arara" />
         </div>
     </main>
     <footer>
+        <div class="quero-adotar-form" id="quero-adotar">
+            <h2>Quero Adotar!</h2>
+            <p><small>Insira suas informações abaixo para que possamos entrar em contato!</small></p>
+            <form>
+                <label for="fname">Nome Completo</label>
+                <input type="text" name="fname">
+                <label for="femail">E-mail</label>
+                <input type="email">
+                <label for="fcel">Telefone</label>
+                <input type="tel">
+                <input class="btn" type="submit" value="Enviar!">
+            </form>
+        </div>
 
     </footer>
 </body>

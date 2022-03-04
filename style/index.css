@@ -1,14 +1,15 @@
 :root {
-    --cor-principal: #B2967D;
-    --cor-principal-dark: #9c8571;
-    --cor-principal-darker: #816e5d;
-    --cor-secundaria:  #E6BEAE;
-    --cor-secundaria-dark:#cc8e75;
-    --bg-color: #E7D8C9;
-    --bird-picker-color-dark: #5c3f24;
-    --bird-picker-color-light: #826244;
-    --bird-picker-bg-color-light: #FFDCCC;
-    --bird-picker-bg-color-dark: #E6BEAE;
+    --cor-principal: #A4B494;
+    --cor-principal-dark: #6F845A;
+    --cor-principal-darker: #3A5320;
+    --cor-secundaria:#3B5249;
+    --cor-secundaria-light:#46755E;
+    --cor-secundaria-lighter: #519872;
+    --bg-color: #BEC5AD;
+    --bird-picker-color-dark: #A4B494;
+    --bird-picker-color-light: #34252F;
+    --bird-picker-bg-color-light: #519872;
+    --bird-picker-bg-color-dark: #3B5249;
 }
 
 *{
@@ -43,7 +44,7 @@ h1{
     margin: 0px 10px;
 }
 
-nav{
+header nav{
     background-color: var(--cor-principal);
     height: 100%;
     width: 50%;
@@ -120,6 +121,10 @@ nav ul, nav ul li{
     background-color: var(--cor-principal-darker);
 }
 
+footer{
+    background-color: var(--cor-secundaria);
+    box-shadow: 0px 2px 15px rgb(0 0 0);
+}
 
 @media (max-width:701px){
     header{
