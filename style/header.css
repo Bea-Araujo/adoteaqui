@@ -1,0 +1,122 @@
+header{
+    height: 70px;
+    width: 100%;
+    background-color: var(--cor-secundaria);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+    box-shadow: 0px -2px 15px rgb(0 0 0);
+    
+}
+
+h1{
+    color: var(--cor-principal);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0px 10px;
+}
+
+header nav{
+    background-color: var(--cor-principal);
+    height: 100%;
+    width: 50%;
+    font-size: 20px;
+}
+
+header ul{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+}
+
+header ul li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+}
+
+a{
+    color: var(--cor-secundaria);
+}
+
+a:hover{
+    color: #5a5a5a;
+    /* background-color: #b4b43d; */
+}
+
+nav ul, nav ul li{
+    list-style: none;
+}
+
+.menu{
+    position: relative;
+    padding: 10px;
+}
+
+.ani-menu{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    width: fit-content;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-3em);
+    z-index: -1;
+    /* transition: all 1s, visibility 0s linear 0.3s, z-index 0s linear 0.00s; */
+    transition: all 0.8s ease 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+}
+
+.ani-menu a{
+    color: var(--cor-secundaria);
+    background-color: var(--cor-principal-dark);
+    padding: 0px 10px 5px 10px;
+}
+
+.menu:focus, .menu:focus-within .ani-menu, .menu:hover .ani-menu{
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+    transform: translateY(0);
+    transition-delay: 0s, 0s, 0.03s;
+}
+
+.menu:hover{
+    background-color: var(--cor-principal-dark);
+}
+.ani-menu a:hover{
+    background-color: var(--cor-principal-darker);
+}
+
+@media(max-width:426px){
+    header {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        box-shadow: none;
+    }
+
+    header nav{
+        width: 100%;
+    }
+
+    header nav ul{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    header nav ul li{
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid var(--cor-principal-dark);
+    }
+
+}
