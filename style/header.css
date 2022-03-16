@@ -18,6 +18,10 @@ h1{
     margin: 0px 10px;
 }
 
+h1::before{
+    content: "🐾";
+}
+
 header nav{
     background-color: var(--cor-principal);
     height: 100%;
